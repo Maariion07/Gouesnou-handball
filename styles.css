@@ -1,0 +1,731 @@
+/* Partie header */
+#titre_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* permet de passer à la ligne sur petit écran */
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    max-width: 100px;
+}
+
+#titre_logo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* ✅ Version responsive pour écran étroit (mobile) */
+@media (max-width: 600px) {
+    #titre_logo {
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 50px;
+        max-width: 80px;
+    }
+
+    #titre_logo h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+body { /* ce bloc s'assure que le body ne créé pas d'espace */
+  margin: 0;
+  padding: 0;
+}
+main {
+    min-height: 60vh;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: #0713b9;
+    text-align: center;
+    font-size: 3rem;
+}
+.logo1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.image-reduite {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Barre de navigation navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 20px;
+    width: 100%;
+}
+.logo-navbar {
+    height: 80px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #0713b9;
+    font-size: 20px;
+}
+
+/* Hamburger toujours aligné à droite */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #0713b9;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-toggle {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Style du menu déroulant */
+.dropdown {
+    position: relative;
+}
+.dropdown > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+.dropdown-menu li {
+border-bottom: 1px solid #0713b9;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #0713b9;
+    text-decoration: none;
+}
+.dropdown-menu a:hover {
+    background-color: #dce4ff;
+}
+/* afficher le menu déroulant au suvrol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* BOUTON HAMBURGER
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* RESPONSIVE : menu burger
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-toggle {
+        display: block; /* le bouton apparaît
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0713b9;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        border-top: 1px solid #0a1fc4;
+    }
+
+    .dropdown-menu {
+        position: static;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none; /* désactive le hover sur mobile
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+*/
+
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-logo {
+  max-width: 220px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+}
+/* STATS SECTION */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.stat h2 {
+  color: #0713b9;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+/*page index - section actualités */
+
+.actualites {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre les éléments horizontalement*/
+    text-align: center;
+    margin-bottom: 50px; /* espacement entre actualité et les sponsors */
+}
+.actualites h1 {
+    font-size: 3rem;
+}
+.actualites h2 {
+    text-align: center;
+}
+
+
+/* Page index - section actualité */
+.actualites {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.card .fb-post {
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+/* Facebook iframe adaptatif */
+.card .fb-post iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 400px !important;
+}
+
+/* Survol */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Bouton "Voir plus" */
+.voir-plus {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px auto 0 auto;
+  display: block;
+}
+
+.voir-plus:hover {
+  background-color: #0056b3;
+}
+
+/* Page index - zone sponsors */
+.sponsors h1 {
+    font-size: 3rem;
+}
+
+.sponsors-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: white;
+}
+
+.sponsors-slider {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.02s linear; /* Transition fluide */
+    will-change: transform;
+}
+
+.sponsors-slider img {
+    width: auto; /* Ajuste selon la taille de tes images */
+    height: 90px;
+}
+
+/* Page inscriptions */
+.blue-btn {
+    background-color: #1e5ed4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+  }
+
+  .blue-btn:hover {
+    background-color: #174cab;
+  }
+
+
+
+/* Page organigramme */
+.orga-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orga-page section {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Page Evenement */
+.inscription-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0713b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(7, 19, 185, 0.4);
+    margin-top: 10px;
+}
+
+.inscription-btn:hover {
+    background-color: #030a73;
+    transform: scale(1.05);
+}
+
+
+/* Page equipes */
+
+/* HERO SECTION spécifique à la page Équipes */
+.hero-equipes {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* taille de la baniere*/
+  overflow: hidden;
+}
+
+.hero-equipes-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8); /* ou ajuste selon besoin */
+}
+
+.hero-equipes-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-equipes-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+/* Container principal page équipes*/
+#equipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
+
+#equipes-container > p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+.equipe-section {
+  width: 100%;
+}
+.equipe-section h1 {
+  margin: 30px 0 10px 0;
+  text-align: left;
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.equipe-section h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #0713b9; /* Bleu club */
+  border-radius: 2px;
+}
+/*.equipe-section:nth-child(even) {  ajout d'un léger fond de couleur une section sur deux
+  background-color: #f0f4ff;
+  padding: 20px;
+  border-radius: 10px;
+} */
+
+.equipe-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Cartes des équipes */
+.card.equipe-card {
+  width: 320px;
+  height: 380px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: transform 0.2s;
+}
+
+.equipe-card:hover {
+  transform: scale(1.03);
+}
+
+/* Section image et infos équipe */
+.equipe-img {
+  height: 260px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px auto 0;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.equipe-img p {
+  margin: 5px 0;
+  width: auto;
+}
+
+.equipe-img p:first-child {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.equipe-img p:nth-child(2) {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.equipe-img img {
+  max-height: 280px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Bouton lien FFHB */
+.lien-FFHB {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #0713b9;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.lien-FFHB:hover {
+  background-color: #0511a0;
+}
+
+/* Lien autour du bouton */
+.equipe-card a {
+  text-decoration: none;
+}
+
+/* Page calendrier et horaire entrainement */
+
+.planning-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planning-page section {
+    text-align: center;
+    margin: 0 auto;
+}
+.calendrier-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendrier-page section {
+    text-align: center;
+    margin: 0 auto;
+}
+h2 {
+    text-align: center;
+}
+
+/* page Sponsors */
+/* Cards Container */
+    #sponsor-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    /* Single Card */
+    .card {
+      width: 250px;
+      height: 300px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      max-height: 180px;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .site-internet {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      background-color: #0713b9;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      align-self: center;
+    }
+
+    .site-internet:hover {
+      background-color: #0713b9;
+    }
+
+
+/* Zone footer */
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Espacement entre les icônes */
+    justify-content: center; /* Centrer les boutons dans le footer */
+  }
+
+
+  .social-button img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-button img:hover {
+    transform: scale(1.1); /* Agrandit l'image au survol */
+  }
+
+  footer {
+    display: flex;
+    justify-content: center; /* Centre tout le contenu du footer */
+    align-items: center; /* Centre verticalement */
+    width: 100%;
+    padding: 10px 20px; /* Un peu d'espace autour */
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 16px;
+    position: absolute;
+    left: 10px; /* Le texte reste à gauche */
+  }
+
+  .social-button img {
+    width: 24px; /* Ajuste la taille des icônes si nécessaire */
+    height: auto;
+  }
+
+/* Page contact */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-page section {
+    text-align: center;
+    margin: 0 auto;
+}

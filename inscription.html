@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gouesnou Handball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="images/logo_trans.png" alt="logo GHB" class="logo-navbar">
+            <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button> <!-- hamburger-->
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#club">Le club</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="historique.html">Historique</a></li>
+                        <li><a href="organigramme.html">Organigramme</a></li>
+                        <li><a href="inscription.html">Inscription</a></li>
+                    </ul>
+                </li>
+                <li><a href="evenement.html">Nos évenements</a></li>
+                <li class="dropdown">
+                    <a href="#Equipes">Les équipes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seniors_gars.html">Séniors Gars</a></li>
+                        <li><a href="seniors_filles.html">Séniors filles</a></li>
+                        <li><a href="loisirs.html">Loisirs</a></li>
+                        <li><a href="filiere_jeune_masculine.html">Filière jeune masculine</a></li>
+                        <li><a href="filiere_jeune_feminines.html">Filière jeune féminine</a></li>
+                        <li><a href="ecolehand.html">Ecole de hand/ Baby-hand</a></li>
+                        <li><a href="entrainement.html">Planning des entraînements</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#XX">Competitions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendrier.html">Convocations</a></li>
+                        <li><a href="resultat.html">Résultats du week-end</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#Partenaires">Partenaires</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="partenaire.html">Nos partenaires</a></li>
+                        <li><a href="form_partenaire.html">Devenir partenaires</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="inscriptions-section" style="padding: 2rem; max-width: 800px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6; color: #0713b9;">
+
+  <h2 style="text-align: center; color: #0713b9;">Inscriptions</h2>
+  <p>Pour les nouvelles licences, l'inscription se fait directement en ligne.</p>
+  <p>Pour que nous puissions créer votre fiche dans notre logiciel, merci de nous communiquer :</p>
+  <ul>
+    <li>Nom</li>
+    <li>Prénom</li>
+    <li>Date et lieu de naissance</li>
+    <li>Adresse e-mail</li>
+  </ul>
+  <p>Vous recevrez ensuite un lien de la fédération pour compléter votre inscription avec les documents demandés.</p>
+
+  <h3 style="color: #34495e;">Tarifs pour la saison 2025-2026</h3>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    <img src="images/tarif1.jpg" alt="tarifs licence 1" class="popup-image" style="width: 100%; max-width: 380px; cursor: pointer;">
+    <img src="images/tarif2.jpg" alt="tarifs licence 2" class="popup-image" style="width: 100%; max-width: 380px; cursor: pointer;">
+  </div>
+
+  <!-- Popup container -->
+  <div id="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:1000;">
+    <span onclick="closePopup()" style="position:absolute; top:20px; right:30px; font-size:40px; color:white; cursor:pointer;">&times;</span>
+    <img id="popup-img" src="" alt="Agrandissement" style="max-width:90%; max-height:90%; border: 5px solid white; border-radius: 10px;">
+  </div>
+
+  <h3 style="margin-top: 2rem; color: #0713b9;;">Documents à fournir</h3>
+
+  <h4>Mineur</h4>
+  <ul>
+    <li><strong>Renouvellement :</strong> Informations du site de la fédération à vérifier + règlement de la licence</li>
+    <li><strong>Création :</strong>
+      <ul>
+        <li>Envoyer les coordonnées précédemment cités</li>
+        <li>Règlement de la licence</li>
+        <li>Photo d'identité</li>
+        <li>Questionnaire de santé</li>
+        <li>Autorisation parentale</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 style="color: #0713b9;">Majeur</h4>
+  <ul>
+    <li><strong>Renouvellement :</strong> Informations du site de la fédération à vérifier + règlement de la licence + Attestation d'honorabilité</li>
+    <li><strong>Création :</strong>
+      <ul>
+        <li>Envoyer les coordonnées précédemment cités</li>
+        <li>Règlement de la licence</li>
+        <li>Photo d'identité</li>
+        <li>Questionnaire de santé</li>
+        <li>Certificat Medical</li>
+        <li>Attestation d'honorabilité</li>
+      </ul>
+    </li>
+  </ul>
+
+  <section style="margin-top: 3rem;">
+  <h3 style="color: #0713b9;">Documents à télécharger</h3>
+  <div style="display: flex; flex-direction: column; gap: 1rem;">
+    <a href="docs/QS majeur.pdf" class="download-btn blue-btn" target="_blank">Questionnaire de santé majeur</a>
+    <a href="docs/QS mineur.pdf" class="download-btn blue-btn" target="_blank">Questionnaire de santé mineur</a>
+    <a href="docs/AUTORISATION-PARENTALE.pdf" class="download-btn blue-btn" target="_blank">Autorisation parentale</a>
+    <a href="docs/CERTIFICAT-MEDICAL.pdf" class="download-btn blue-btn" target="_blank">Certificat médical</a>
+  </div>
+</section>
+
+</main>
+
+<script>
+  const images = document.querySelectorAll('.popup-image');
+  const popup = document.getElementById('popup');
+  const popupImg = document.getElementById('popup-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      popupImg.src = img.src;
+      popup.style.display = 'flex';
+    });
+  });
+
+  function closePopup() {
+    popup.style.display = 'none';
+    popupImg.src = '';
+  }
+
+  // Fermer le popup si on clique en dehors de l'image
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) closePopup();
+  });
+</script>
+
+
+    <footer>
+        <p>© 2025 Gouesnou Handball - Tous droits réservés</p>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/gouesnouHandall" target="_blank" class="social-button">
+                  <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/gouesnouhandball" target="_blank" class="social-button">
+                  <img src="images/instagram.png" alt="Instagram">
+                </a>
+              </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gouesnou Handball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="images/logo_trans.png" alt="logo GHB" class="logo-navbar">
+            <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button> <!-- hamburger-->
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#club">Le club</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="historique.html">Historique</a></li>
+                        <li><a href="organigramme.html">Organigramme</a></li>
+                        <li><a href="inscription.html">Inscription</a></li>
+                    </ul>
+                </li>
+                <li><a href="evenement.html">Nos évenements</a></li>
+                <li class="dropdown">
+                    <a href="#Equipes">Les équipes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seniors_gars.html">Séniors Gars</a></li>
+                        <li><a href="seniors_filles.html">Séniors filles</a></li>
+                        <li><a href="loisirs.html">Loisirs</a></li>
+                        <li><a href="filiere_jeune_masculine.html">Filière jeune masculine</a></li>
+                        <li><a href="filiere_jeune_feminines.html">Filière jeune féminine</a></li>
+                        <li><a href="ecolehand.html">Ecole de hand/ Baby-hand</a></li>
+                        <li><a href="entrainement.html">Planning des entraînements</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#XX">Competitions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendrier.html">Convocations</a></li>
+                        <li><a href="permanence.html">Permanence</a></li>
+                        <li><a href="resultat.html">Résultats du week-end</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#Partenaires">Partenaires</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="partenaire.html">Nos partenaires</a></li>
+                        <li><a href="form_partenaire.html">Devenir partenaires</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- hero Banner -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <img src="images/banieresallecrann.jpeg" alt="tribune" class="hero-bg">
+                <div class="hero-content">
+                    <img src="images/logo_trans.png" alt="logo club" class="hero-logo">
+                    <h1>Bienvenue au Gouesnou Handball</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- section Chiffres -->
+        <section class="stats">
+            <div class="stat">
+                <h2>312</h2>
+                <p>Licenciés</p>
+            </div>
+            <div class="stat">
+                <h2>25</h2>
+                <p>Equipes</p>
+            </div>
+            <div class="stat">
+                <h2>2</h2>
+                <p>Salles de sports</p>
+            </div>
+            <div class="stat">
+                <h2>20</h2>
+                <p>Partenaires</p>
+            </div>
+        </section>
+
+        <section id="actualites" class="actualites">
+            <h1>Actualités</h1>
+
+            <div class="card-container">
+                <!-- Card facebook -->
+                <div class="card">
+                    <img src="https://api.microlink.io/?url=https://www.facebook.com/photo?fbid=1225225269604351&set=a.512756470851238&screenshot=true&embed=screenshot.url"
+                        alt="Publication Facebook"
+                        style="width: 100%; border-radius: 8px;">
+                    <h3 style="margin-top: 15px;">Publication Facebook</h3>
+                    <a href="https://www.facebook.com/photo?fbid=1225225269604351&set=a.512756470851238"
+                        target="_blank" rel="noopener noreferrer">
+                        <button class="voir-plus">Voir plus</button>
+                    </a>
+                </div>
+
+
+                <!-- Card Article -->
+                <div class="card">
+                    <img src="https://api.microlink.io/?url=https://www.letelegramme.fr/finistere/gouesnou-29850/les-u18-filles-du-gouesnou-handball-ont-suivi-un-stage-pousse-6765071.php&screenshot=true&embed=screenshot.url"
+                        alt="Article du Télégramme"
+                        style="width: 100%; border-radius: 8px;">
+                    <h3 style="margin-top: 15px;">Les U18 en stage intensif</h3>
+                    <p>Les U18 filles du Gouesnou Handball ont suivi un stage poussé pendant les vacances scolaires.</p>
+                    <a href="https://www.letelegramme.fr/finistere/gouesnou-29850/les-u18-filles-du-gouesnou-handball-ont-suivi-un-stage-pousse-6765071.php"
+                        target="_blank" rel="noopener noreferrer">
+                        <button class="voir-plus">Voir plus</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Script Facebook SDK -->
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v17.0">
+            </script>
+        </section>
+
+
+        <section id="sponsors" class="sponsors">
+            <h1>Nos Partenaires</h1>
+            <div class="sponsors-container">
+                <div class="sponsors-slider">
+                    <img src="images/art_penty.png" alt="art_penty">
+                    <img src="images/atout_energie.png" alt="atout_energie">
+                    <img src="images/bara_pains.png" alt="bara_pains">
+                    <img src="images/benefiq_habitat.png" alt="benefiq_habitat">
+                    <img src="images/bothorel.png" alt="bothorel">
+                    <img src="images/bruno_fagon.png" alt="bruno_fagon">
+                    <img src="images/bse.png" alt="bse">
+                    <img src="images/color.PNG" alt="color">
+                    <img src="images/erwan_abiven.png" alt="erwan_abiven">
+                    <img src="images/u_express.png" alt="u_express">
+                    <img src="images/ville_gouesnou.png" alt="ville_gouesnou">
+                    <img src="images/dep_finistere.jpg" alt="dep_finistere">
+                    <img src="images/gouest.png" alt="gouest">
+                    <img src="images/laita.png" alt="laita">
+                    <img src="images/nest.png" alt="nest">
+                    <img src="images/piazza.PNG" alt="piazza">
+                    <img src="images/ribinn.png" alt="ribinn">
+                    <img src="images/samsic.png" alt="samsic">
+                    <img src="images/le_saint.png" alt="le_saint">
+                    <img src="images/tomtip.PNG" alt="tomtip">
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </main>
+
+    <footer>
+        <p>© 2025 Gouesnou Handball - Tous droits réservés</p>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/gouesnouHandall" target="_blank" class="social-button">
+                  <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/gouesnouhandball" target="_blank" class="social-button">
+                  <img src="images/instagram.png" alt="Instagram">
+                </a>
+              </div>
+    </footer>
+
+</body>
+</html>
