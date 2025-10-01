@@ -297,6 +297,8 @@ border-bottom: 1px solid #0713b9;
     align-items: center; /* centre les éléments horizontalement*/
     text-align: center;
     margin-bottom: 50px; /* espacement entre actualité et les sponsors */
+    background-color: #f0f0f0;
+    padding: 40px 20px;
 }
 .actualites h1 {
     font-size: 3rem;
@@ -304,14 +306,6 @@ border-bottom: 1px solid #0713b9;
 .actualites h2 {
     text-align: center;
 }
-
-
-/* Page index - section actualité */
-.actualites {
-  background-color: #f0f0f0;
-  padding: 40px 20px;
-}
-
 .card-container {
   display: flex;
   justify-content: center;
